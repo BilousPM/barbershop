@@ -126,6 +126,10 @@ body {
   background-color: #f7f7f7;
 }
 
+.team-description {
+  color: var(--accent-color);
+}
+
 /* portfolio */
 
 /* online booking */
@@ -133,7 +137,45 @@ body {
   background-color: #555555;
 }
 
+.booking-title {
+  color: var(--white-text-color);
+}
+
 /* contacts */
 .contacts {
   background-color: #555555;
+}
+
+.contact-title {
+  color: var(--white-text-color);
+}
+.contacts .adres {
+  color: var(--text-on-dark);
+}
+.contacts .phone {
+  color: var(--text-on-dark);
+}
+.contacts .mail {
+  color: var(--text-on-dark);
+}
+.contact-phrases {
+  color: var(--white-text-color);
+}
+.contact-descriptions {
+  color: var(--text-on-dark);
+}
+
+/* footer */
+
+.copiright {
+  color: var(--text-on-dark);
+}
+
+.footer .link {
+  color: currentColor;
+}
+
+.footer .link:hover,
+.footer .link:focus {
+  color: var(--accent-color);
 }
