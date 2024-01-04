@@ -1,0 +1,139 @@
+/* function calc(x / */
+
+:root {
+  --primary-text-color: #303030;
+  --text-on-light: #555555;
+  --text-on-dark: #9da4bd;
+  --white-text-color: #ffffff;
+  --accent-color: #ff6c00;
+}
+
+body {
+  background-color: #fff;
+  color: var(--primary-text-color);
+  font-family: "open sans", sans-serif;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* button */
+.button {
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.button.primary {
+  color: var(--white-text-color);
+}
+
+.button.secondary {
+  color: var(--primary-text-color);
+}
+
+.button.primary:hover,
+.button.primary:focus {
+  background-color: var(--accent-color);
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+  background-color: var(--accent-color);
+}
+
+/* heder */
+.header {
+  background-color: darkgrey;
+}
+
+.site-nav .link {
+  color: var(--white-text-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.tel {
+  color: var(--white-text-color);
+}
+
+.tel:hover,
+.tel:focus {
+  color: var(--accent-color);
+}
+
+/* hero */
+.hero {
+  background-color: #484747;
+}
+
+.social-link .link {
+  color: var(--primary-text-color);
+}
+
+.social-link .link:hover,
+.social-link .link:focus {
+  color: var(--accent-color);
+}
+
+.phrases-opaciti {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.hero-title {
+  color: var(--white-text-color);
+}
+
+.hero-phrases {
+  color: var(--text-on-dark);
+}
+
+/* best barbershop*/
+.section-phrases {
+  color: var(--text-on-light);
+}
+
+/* services and prices */
+.servis {
+  background-color: rgb(78, 75, 75);
+}
+
+.servis-title {
+  color: var(--white-text-color);
+}
+
+.prises-phrases {
+  color: var(--text-on-dark);
+}
+
+/* preferense */
+.preferense-phrases {
+  color: var(--text-on-light);
+}
+
+/* team */
+.team {
+  background-color: #f7f7f7;
+}
+
+/* portfolio */
+
+/* online booking */
+.booking {
+  background-color: #555555;
+}
+
+/* contacts */
+.contacts {
+  background-color: #555555;
+}
