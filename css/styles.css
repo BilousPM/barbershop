@@ -14,6 +14,15 @@ body {
   font-family: "open sans", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Raleway, sans-serif;
+}
+
 .list {
   list-style: none;
 }
@@ -24,6 +33,14 @@ body {
 
 /* button */
 .button {
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+
   background-color: transparent;
   border: 1px solid var(--accent-color);
   border-radius: 25px;
@@ -49,6 +66,20 @@ body {
   background-color: var(--accent-color);
 }
 
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 2.1px;
+}
+
+.subtitle {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
 /* heder */
 .header {
   background-color: darkgrey;
@@ -56,6 +87,11 @@ body {
 
 .site-nav .link {
   color: var(--white-text-color);
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.2px;
 }
 
 .site-nav .link:hover,
@@ -65,6 +101,12 @@ body {
 
 .tel {
   color: var(--white-text-color);
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 }
 
 .tel:hover,
@@ -79,6 +121,11 @@ body {
 
 .social-link .link {
   color: var(--primary-text-color);
+
+  font-size: 11px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.2px;
 }
 
 .social-link .link:hover,
@@ -91,16 +138,37 @@ body {
 }
 
 .hero-title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.6px;
+
   color: var(--white-text-color);
 }
 
 .hero-phrases {
+  font-size: 18px;
+  line-height: calc(30 / 18); /* 166.667% */
+  letter-spacing: 0.36px;
+
   color: var(--text-on-dark);
 }
 
 /* best barbershop*/
+.about {
+}
+
 .section-phrases {
   color: var(--text-on-light);
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.36px;
+}
+
+.section-phrases.description {
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  letter-spacing: 0.28px;
 }
 
 /* services and prices */
@@ -114,11 +182,32 @@ body {
 
 .prises-phrases {
   color: var(--text-on-dark);
+  font-size: 18px;
+  line-height: calc(30 / 18); /* 166.667% */
+  letter-spacing: 0.36px;
 }
 
 /* preferense */
 .preferense-phrases {
   color: var(--text-on-light);
+  font-size: 18px;
+  line-height: calc(30 / 18); /* 166.667% */
+  letter-spacing: 0.36px;
+}
+
+.preferense-span {
+  color: var(--primary-text-color);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 2.1px;
+}
+
+.preferense-description {
+  color: var(--primary-text-color);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 /* team */
@@ -126,8 +215,17 @@ body {
   background-color: #f7f7f7;
 }
 
+.team-name {
+  font-family: Open Sans, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.36px;
+}
+
 .team-description {
   color: var(--accent-color);
+  line-height: 1.2;
+  letter-spacing: 0.28px;
 }
 
 /* portfolio */
@@ -149,30 +247,60 @@ body {
 .contact-title {
   color: var(--white-text-color);
 }
+
 .contacts .adres {
   color: var(--text-on-dark);
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: calc(30 / 18); /* 166.667% */
+  letter-spacing: 0.36px;
 }
+
 .contacts .phone {
   color: var(--text-on-dark);
+  font-style: normal;
+  font-size: 18px;
+  line-height: calc(30 / 18); /* 166.667% */
+  letter-spacing: 0.36px;
 }
+
 .contacts .mail {
   color: var(--text-on-dark);
+  font-style: normal;
+  font-size: 18px;
+  line-height: calc(30 / 18); /* 166.667% */
+  letter-spacing: 0.36px;
+  text-decoration-line: underline;
 }
+
 .contact-phrases {
   color: var(--white-text-color);
 }
+
 .contact-descriptions {
   color: var(--text-on-dark);
+  font-size: 18px;
+  line-height: calc(30 / 18); /* 166.667% */
+  letter-spacing: 0.36px;
 }
 
 /* footer */
 
 .copiright {
   color: var(--text-on-dark);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 2.2px;
 }
 
 .footer .link {
   color: currentColor;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 2.2px;
 }
 
 .footer .link:hover,
