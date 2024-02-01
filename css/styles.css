@@ -4,10 +4,13 @@
   --text-on-dark: #9da4bd;
   --white-text-color: #ffffff;
   --accent-color: #ff6c00;
+
+  /* background-color */
+  --primari-background-color: #ffffff;
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--primari-background-color);
   color: var(--primary-text-color);
   font-family: "open sans", sans-serif;
 }
@@ -37,8 +40,21 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 /* ===== components ===== */
 
@@ -47,7 +63,9 @@ img {
 }
 
 .container {
-  width: 1170px;
+  /* width: 1170px; */
+  width: 1200px;
+
   padding: 0 15px;
   margin: 0 auto;
 
@@ -65,7 +83,8 @@ img {
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
+  line-height: 1.2;
+  /* line-height: normal; */
   letter-spacing: 1.08px;
   text-transform: uppercase;
 
@@ -100,22 +119,70 @@ img {
 
   font-family: Raleway, sans-serif;
   font-size: 42px;
-  line-height: 1.2;
+  line-height: calc(49 / 42);
+  /* line-height: normal; */
   letter-spacing: 2.1px;
 }
 
 .upertitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   margin-bottom: 20px;
 
   font-size: 11px;
   font-weight: 600;
-  line-height: 1.2;
+  /* line-height: 1.2; */
+  line-height: normal;
   text-transform: uppercase;
 }
 
+.upertitle::before,
+.social-list::before {
+  display: inline-block;
+  content: "";
+
+  width: 60px;
+  height: 1px;
+  background-color: var(--primary-text-color);
+}
+
+/* .upertitle::before {
+  margin-right: 20px;
+} */
 /*---------- heder ----------*/
 .header {
   background-color: darkgrey;
+}
+
+.header > .container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 131px;
+}
+
+.header-nav {
+  margin-right: auto;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-list .link {
+  display: block;
+  padding: 49px 0;
+}
+
+.header-contact-wrap {
+  display: flex;
+  align-items: center;
+  gap: 43px;
 }
 
 .header .link {
@@ -147,23 +214,59 @@ img {
 
 /* ----------- hero ------------ */
 .hero {
-  background-color: #484747;
 }
 
-.social-link .link {
+.hero .container {
+  /* max-width: 1070px; */
+  padding: 172px 526px 208px 100px;
+  background-color: rgba(25, 28, 38, 0.2);
+  background-image: url(../images/slider-bg-hero/bg-image-1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+}
+
+.social-list {
+  align-items: center;
+  display: flex;
+  gap: 40px;
+}
+
+.social-link {
+  display: inline-flex;
+  padding-top: 56px;
+  padding-bottom: 56px;
+
   font-size: 11px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 2.2px;
 }
 
-.social-link .link:hover,
-.social-link .link:focus {
+.footer .link {
+  color: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
   color: var(--accent-color);
 }
 
+/* .footer .link:not(:last-child) {
+  margin-right: 40px;
+} */
+
+/* .social-link .link:hover,
+.social-link .link:focus {
+  color: var(--accent-color);
+} */
+
 .phrases-opaciti {
   color: rgba(157, 164, 189, 0.6);
+}
+
+.phrases-opaciti::before {
+  background-color: rgba(157, 164, 189, 0.6);
 }
 
 .hero-title {
@@ -182,8 +285,25 @@ img {
 }
 
 /* ---------- best barbershop ---------*/
-.best-barb-title {
-  margin-bottom: 20px;
+/* .about {
+  background-color: var(--primari-background-color);
+} */
+.about-container {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+/* .about-item:not(:last-child) {
+  margin-right: 30px;
+} */
+
+.about-right-wrap {
+  width: 470px;
 }
 
 .section-phrases {
@@ -205,22 +325,107 @@ img {
 }
 
 /* ---------services and prices ---------- */
+
 .servis {
-  background-color: rgb(78, 75, 75);
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #111319;
+  background-image: url(../images/servis-image/servis-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .servis-title {
   color: var(--white-text-color);
 }
 
-.prises-phrases {
+.prises-wrap {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 44px;
+}
+
+.prises-list {
+  flex-basis: 570px;
+  padding: 30px 20px;
+}
+
+.prises-list:first-child {
+  background-image: linear-gradient(
+    to bottom,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
+}
+
+.prises-list:last-child {
+  background-image: linear-gradient(
+    to bottom,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
+}
+
+.prises-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+
   color: var(--text-on-dark);
   font-size: 18px;
   line-height: calc(30 / 18); /* 166.667% */
   letter-spacing: 0.36px;
 }
 
+.prises-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.prises-item::before {
+  content: " ";
+  display: block;
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+}
+
+.prises-item-servis {
+  order: -1;
+}
+
+.servis .button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* -------- preferense ---------- */
+.preferense-container {
+  display: flex;
+}
+
+.preferens-list {
+  row-gap: 30px;
+  column-gap: 35px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.preferens-item {
+  background-color: rgba(247, 247, 247, 1);
+  display: block;
+  text-align: center;
+  padding: 20px 24px;
+  width: 170px;
+  height: 133px;
+}
+
+.preferense-right-wrap {
+  width: 431px;
+}
+
 .preferense-span {
   margin-bottom: 6px;
 
@@ -250,11 +455,20 @@ img {
   background-color: #f7f7f7;
 }
 
+.team-list {
+  display: flex;
+  gap: 30px;
+}
+
+.team-item {
+  text-align: center;
+}
 .team-title {
   margin-bottom: 44px;
 }
 
 .team-name {
+  margin-top: 30px;
   margin-bottom: 8px;
 
   font-weight: 400;
@@ -272,26 +486,53 @@ img {
 }
 
 /* portfolio */
+.portfolio-list {
+  display: flex;
+  gap: 30px;
+}
+
 .portfolio-upertitle {
   margin-bottom: 44px;
 }
 
-/* online booking */
+/* online booking and contacts */
+.container-group {
+  margin: 0 auto;
+  max-width: 1600px;
+  background-color: #191c26;
+  background-image: url(../images/contact-bg-img/Contact-bg-img.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .booking {
-  background-color: #555555;
+  width: 570px;
+}
+
+.booking.section {
+  padding-top: 130px;
+  padding-bottom: 111px;
 }
 
 .booking-title {
   color: var(--white-text-color);
 }
 
-/* contacts */
 .contacts {
-  background-color: #555555;
+  padding-left: 105px;
+  padding-top: 130px;
+  padding-bottom: 111px;
+  width: 570px;
 }
 
 .contact-title {
   color: var(--white-text-color);
+  margin-bottom: 40px;
 }
 
 .addres-wrap {
@@ -299,6 +540,9 @@ img {
 }
 
 .contacts .adres {
+  display: block;
+  margin-bottom: 20px;
+
   color: var(--text-on-dark);
   font-style: normal;
   font-size: 18px;
@@ -308,6 +552,9 @@ img {
 }
 
 .contacts .phone {
+  display: block;
+  margin-bottom: 20px;
+
   color: var(--text-on-dark);
   font-style: normal;
   font-size: 18px;
@@ -316,6 +563,9 @@ img {
 }
 
 .contacts .mail {
+  display: block;
+  margin-bottom: 70px;
+
   color: var(--text-on-dark);
   font-style: normal;
   font-size: 18px;
@@ -328,6 +578,10 @@ img {
   color: var(--white-text-color);
 }
 
+.contact-phrases::before {
+  background-color: rgba(157, 164, 189, 0.4);
+}
+
 .contact-descriptions {
   color: var(--text-on-dark);
   font-size: 18px;
@@ -336,6 +590,10 @@ img {
 }
 
 /* footer */
+.footer {
+  display: flex;
+  align-items: baseline;
+}
 
 .copiright {
   color: var(--text-on-dark);
@@ -343,17 +601,10 @@ img {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 2.2px;
+  margin-right: auto;
 }
 
-.footer .link {
-  color: currentColor;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: 2.2px;
-}
-
-.footer .link:hover,
+/* .footer .link:hover,
 .footer .link:focus {
   color: var(--accent-color);
-}
+} */
