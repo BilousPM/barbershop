@@ -164,6 +164,10 @@ img {
   margin-right: 131px;
 }
 
+.logo-svg {
+  fill: var(--primary-text-color);
+}
+
 .header-nav {
   margin-right: auto;
 }
@@ -467,8 +471,47 @@ img {
   margin-bottom: 44px;
 }
 
-.team-name {
+.team-wrapper {
   margin-top: 30px;
+}
+
+.icon-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--primary-text-color);
+}
+
+.icon-link:hover,
+.icon-link:focus {
+  color: var(--accent-color);
+}
+
+.social-icons {
+  fill: currentColor;
+}
+
+/* .icon-link:hover .social-icons,
+.icon-link:focus .social-icons {
+  fill: var(--accent-color);
+} */
+
+/* .social-icons {
+  fill: #303030;
+} */
+
+.team-name {
   margin-bottom: 8px;
 
   font-weight: 400;
@@ -502,7 +545,7 @@ img {
   background-color: #191c26;
   background-image: url(../images/contact-bg-img/Contact-bg-img.png);
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: left calc(50% + 408px) top 50%;
 }
 
 .contacts-container {
@@ -539,39 +582,29 @@ img {
   width: 270px;
 }
 
-.contacts .adres {
-  display: block;
-  margin-bottom: 20px;
-
-  color: var(--text-on-dark);
+.contacts .link {
+  display: flex;
+  gap: 16;
   font-style: normal;
+  color: var(--text-on-dark);
   font-size: 18px;
-  font-weight: 700;
-  line-height: calc(30 / 18); /* 166.667% */
   letter-spacing: 0.36px;
+  line-height: calc(30 / 18);
+}
+
+.contacts .adres {
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .contacts .phone {
-  display: block;
+  align-items: center;
   margin-bottom: 20px;
-
-  color: var(--text-on-dark);
-  font-style: normal;
-  font-size: 18px;
-  line-height: calc(30 / 18); /* 166.667% */
-  letter-spacing: 0.36px;
 }
 
 .contacts .mail {
-  display: block;
+  align-items: center;
   margin-bottom: 70px;
-
-  color: var(--text-on-dark);
-  font-style: normal;
-  font-size: 18px;
-  line-height: calc(30 / 18); /* 166.667% */
-  letter-spacing: 0.36px;
-  text-decoration-line: underline;
 }
 
 .contact-phrases {

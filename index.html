@@ -30,9 +30,11 @@
     <!---------------- heder ---------------->
     <header class="header">
       <div class="container">
-        <a href="./index.html" class="logo"
-          ><img src="./images/Logo.jpg" alt="logo" width="69" height="55"
-        /></a>
+        <a href="./index.html" class="logo">
+          <svg class="logo-svg" width="69" height="55">
+            <use href="./images/icons.svg#icon-logo"></use>
+          </svg>
+        </a>
         <nav class="header-nav">
           <ul class="header-list list">
             <li><a href="" class="link">About</a></li>
@@ -89,7 +91,7 @@
           <ul class="about-list list">
             <li class="about-item">
               <img
-                src="./images/img1.jpg"
+                src="./images/about/img1.jpg"
                 alt="shaves his beard"
                 width="270"
                 height="445"
@@ -97,7 +99,7 @@
             </li>
             <li class="about-item">
               <img
-                src="./images/img2.jpg"
+                src="./images/about/img2.jpg"
                 alt="shaves his neck"
                 width="270"
                 height="445"
@@ -220,14 +222,60 @@
                 width="370"
                 height="346"
               />
-              <h3 class="team-name">John Smith</h3>
-              <p class="team-description">Extreme Barber</p>
-              <ul class="list">
-                <li><a href="" aria-label="Instagram link"></a></li>
-                <li><a href="" aria-label="Twitter link"></a></li>
-                <li><a href="" aria-label="Facebook link"></a></li>
-                <li><a href="" aria-label="linkedin link"></a></li>
-              </ul>
+              <div class="team-wrapper">
+                <h3 class="team-name">John Smith</h3>
+                <p class="team-description">Extreme Barber</p>
+                <ul class="list icon-list">
+                  <li>
+                    <a
+                      class="icon-link"
+                      href="https://instagra.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram icon"
+                      ><svg class="social-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="icon-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Twitter link"
+                      ><svg class="social-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="icon-link"
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook link"
+                      ><svg class="social-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="icon-link"
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="linkedin link"
+                      ><svg class="social-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="team-item">
               <img
@@ -236,14 +284,60 @@
                 width="370"
                 height="346"
               />
-              <h3 class="team-name">Michele Doe</h3>
-              <p class="team-description">Extreme Barber</p>
-              <ul class="list">
-                <li><a href="" aria-label="Instagram link"></a></li>
-                <li><a href="" aria-label="Twitter link"></a></li>
-                <li><a href="" aria-label="Facebook link"></a></li>
-                <li><a href="" aria-label="linkedin link"></a></li>
-              </ul>
+              <div class="team-wrapper">
+                <h3 class="team-name">Michele Doe</h3>
+                <p class="team-description">Extreme Barber</p>
+                <ul class="list icon-list">
+                  <li>
+                    <a
+                      class="icon-link"
+                      href="https://instagra.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram icon"
+                      ><svg class="social-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="icon-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Twitter link"
+                      ><svg class="social-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="icon-link"
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook link"
+                      ><svg class="social-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="icon-link"
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="linkedin link"
+                      ><svg class="social-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="team-item">
               <img
@@ -252,14 +346,60 @@
                 width="370"
                 height="346"
               />
-              <h3 class="team-name">Alan Black</h3>
-              <p class="team-description">Extreme Barber</p>
-              <ul class="list">
-                <li><a href="" aria-label="Instagram link"></a></li>
-                <li><a href="" aria-label="Twitter link"></a></li>
-                <li><a href="" aria-label="Facebook link"></a></li>
-                <li><a href="" aria-label="linkedin link"></a></li>
-              </ul>
+              <div class="team-wrapper">
+                <h3 class="team-name">Alan Black</h3>
+                <p class="team-description">Extreme Barber</p>
+                <ul class="list icon-list">
+                  <li>
+                    <a
+                      class="icon-link"
+                      href="https://instagra.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram icon"
+                      ><svg class="social-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="icon-link"
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Twitter link"
+                      ><svg class="social-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="icon-link"
+                      href="https://www.facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook link"
+                      ><svg class="social-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="icon-link"
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="linkedin link"
+                      ><svg class="social-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -323,14 +463,23 @@
           <section class="contacts section">
             <h2 class="section-title contact-title">Contacts</h2>
             <address class="addres-wrap">
-              <a href="" class="adres link"
-                >st. Vasilkivska, 7A<br />Kyiv, 08132</a
-              >
+              <a href="" class="adres link">
+                <svg class="adres-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-map-pin"></use>
+                </svg>
+                st. Vasilkivska, 7A<br />Kyiv, 08132
+              </a>
               <a href="tel:+380441111111" class="phone link"
-                >+38 044 111 11 11</a
+                ><svg class="adres-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+                +38 044 111 11 11</a
               >
               <a href="mailto:barbershop@email.com" class="mail link"
-                >barbershop@email.com</a
+                ><svg class="adres-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-mail"></use>
+                </svg>
+                barbershop@email.com</a
               >
             </address>
             <p class="upertitle contact-phrases">Working hours</p>
