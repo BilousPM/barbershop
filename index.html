@@ -28,7 +28,7 @@
 
   <body>
     <!---------------- heder ---------------->
-    <header class="header">
+    <header class="header no-transparency" data-header>
       <div class="container">
         <a href="./index.html" class="logo">
           <svg class="logo-svg" width="69" height="55">
@@ -55,33 +55,56 @@
     <main>
       <!-------------- hero --------------->
       <section class="hero">
-        <div class="container">
-          <ul class="list social-list">
-            <li>
-              <a
-                href="https://www.instagram.com/"
-                class="social-link link"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Instagram</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com"
-                class="social-link link"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Youtube</a
-              >
-            </li>
-          </ul>
-          <p class="upertitle phrases-opaciti">A hair salon for men in Kyiv</p>
-          <h1 class="section-title hero-title">BarberShop</h1>
-          <p class="hero-phrases">
-            We are experts in trendy men’s haircuts. We work quickly, carefully
-            and with style.
-          </p>
+        <div class="hero-container container">
+          <div class="hero-left-side">
+            <ul class="list social-list">
+              <li>
+                <a
+                  href="https://www.instagram.com/"
+                  class="social-link link"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com"
+                  class="social-link link"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="hero-right-side">
+            <p class="upertitle phrases-opaciti">
+              A hair salon for men in Kyiv
+            </p>
+            <h1 class="section-title hero-title">BarberShop</h1>
+            <p class="hero-phrases">
+              We are experts in trendy men’s haircuts. We work quickly,
+              carefully and with style.
+            </p>
+            <ul class="slider-pagination list">
+              <li class="slider-pagination-item activ"></li>
+              <li class="slider-pagination-item"></li>
+              <li class="slider-pagination-item"></li>
+            </ul>
+            <ul class="slider-list list">
+              <li class="slider-item">
+                <button class="slider-button prev" disabled type="button">
+                  Back
+                </button>
+              </li>
+              <li class="slider-item">
+                <button class="slider-button next" type="button">
+                  Forward
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -180,24 +203,32 @@
       <!--------- preference ------------>
       <section class="preferense section">
         <div class="container preferense-container">
-          <ul class="preferens-list list">
-            <li class="preferens-item">
-              <span class="preferense-span">600</span>
-              <p class="preferense-description">Satisfied customers per day</p>
-            </li>
-            <li class="preferens-item">
-              <span class="preferense-span">50</span>
-              <p class="preferense-description">Awards for excellent service</p>
-            </li>
-            <li class="preferens-item">
-              <span class="preferense-span">20</span>
-              <p class="preferense-description">Kyiv’s best barbers</p>
-            </li>
-            <li class="preferens-item">
-              <span class="preferense-span">100</span>
-              <p class="preferense-description">Gifts for regular customers</p>
-            </li>
-          </ul>
+          <div class="preferense-left-wrap">
+            <ul class="preferens-list list">
+              <li class="preferens-item">
+                <span class="preferense-span">600</span>
+                <p class="preferense-description">
+                  Satisfied customers per day
+                </p>
+              </li>
+              <li class="preferens-item">
+                <span class="preferense-span">50</span>
+                <p class="preferense-description">
+                  Awards for excellent service
+                </p>
+              </li>
+              <li class="preferens-item">
+                <span class="preferense-span">20</span>
+                <p class="preferense-description">Kyiv’s best barbers</p>
+              </li>
+              <li class="preferens-item">
+                <span class="preferense-span">100</span>
+                <p class="preferense-description">
+                  Gifts for regular customers
+                </p>
+              </li>
+            </ul>
+          </div>
           <div class="preferense-right-wrap">
             <p class="upertitle">Old traditional school</p>
             <h2 class="section-title">¿Why people come to us?</h2>
@@ -513,5 +544,7 @@
         </li>
       </ul>
     </footer>
+
+    <script src="./js/header-scroll.js"></script>
   </body>
 </html>
