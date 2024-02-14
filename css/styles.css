@@ -12,6 +12,8 @@
   --btn-radius: 25px;
   --heder-idx: 10;
   --modal-idx: 100;
+  --transition-interactiv-btn: background-color 250ms linear;
+  --transition-interactiv-link: color 250ms linear;
 }
 
 body {
@@ -41,6 +43,12 @@ p {
 .link {
   text-decoration: none;
   color: inherit;
+
+  transition: var(--transition-interactiv-link);
+
+  /* transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: linear; */
 }
 
 img {
@@ -68,7 +76,6 @@ img {
 }
 
 .container {
-  /* width: 1170px; */
   width: 1200px;
 
   padding: 0 15px;
@@ -98,6 +105,12 @@ img {
   border-radius: 25px;
   padding: 11px 19px;
   cursor: pointer;
+
+  transition: var(--transition-interactiv-btn);
+
+  /* transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: linear; */
 }
 
 .button.primary {
@@ -176,6 +189,11 @@ img {
 
 .logo {
   margin-right: 131px;
+  animation: scalelogo 3000ms linear infinite;
+  /* animation-name: scalelogo;
+  animation-duration: 3000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; */
 }
 
 .logo-svg {
@@ -222,12 +240,19 @@ img {
 }
 
 .tel {
+  padding: 49px 0;
   color: var(--white-text-color);
   font-size: 12px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+
+  transition: var(--transition-interactiv-link);
+
+  /* transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: linear; */
 }
 
 .tel:hover,
@@ -311,8 +336,9 @@ hero
 
 .slider-pagination {
   position: absolute;
-  top: calc(50% - 15px);
+  top: 50%;
   right: 20px;
+  transform: translateY(-50%);
 }
 
 .slider-pagination-item {
@@ -554,6 +580,11 @@ hero
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+
+  /* animation-name: rotate;
+  animation-duration: 3000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; */
 }
 
 .preferense-description {
@@ -607,11 +638,20 @@ hero
   border-radius: 50%;
   background-color: #fff;
   color: var(--primary-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  transition-property: transform;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .icon-link:hover,
 .icon-link:focus {
   color: var(--accent-color);
+  transform: scale(1.5);
 }
 
 .social-icons {
@@ -711,16 +751,33 @@ hero
 .contacts .adres {
   margin-bottom: 20px;
   font-weight: 700;
+
+  transition-property: transform;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .contacts .phone {
   align-items: center;
   margin-bottom: 20px;
+
+  transition-property: transform;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .contacts .mail {
   align-items: center;
   margin-bottom: 70px;
+
+  transition-property: transform;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.contacts .mail:hover,
+.contacts .adres:hover,
+.contacts .phone:hover {
+  transform: scale(1.25);
 }
 
 .contact-phrases {
@@ -753,11 +810,31 @@ hero
   margin-right: auto;
 }
 
-.footer .link {
-  color: currentColor;
+/* animation */
+@keyframes scalelogo {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
-/* .footer .link:hover,
-.footer .link:focus {
-  color: var(--accent-color);
-} */
+@keyframes rotate {
+  0% {
+    transform: rotateZ(45deg);
+  }
+
+  50% {
+    transform: rotateZ(90deg);
+  }
+
+  100% {
+    transform: rotateZ(180deg);
+  }
+}
