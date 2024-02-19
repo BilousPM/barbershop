@@ -28,24 +28,26 @@
 
   <body>
     <!---------------- heder ---------------->
-    <header class="header no-transparency" data-header>
+    <header class="header no-transparency" id="header" data-header>
       <div class="container">
-        <a href="./index.html" class="logo">
+        <a href="#header" class="logo">
           <svg class="logo-svg" width="69" height="55">
             <use href="./images/icons.svg#icon-logo"></use>
           </svg>
         </a>
         <nav class="header-nav">
           <ul class="header-list list">
-            <li><a href="" class="link">About</a></li>
-            <li><a href="" class="link">Services and prices</a></li>
-            <li><a href="" class="link">Barbers</a></li>
-            <li><a href="" class="link">Contacts</a></li>
+            <li><a href="#about" class="link">About</a></li>
+            <li><a href="#servises" class="link">Services and prices</a></li>
+            <li><a href="#barbers" class="link">Barbers</a></li>
+            <li><a href="#contacts" class="link">Contacts</a></li>
           </ul>
         </nav>
         <div class="header-contact-wrap">
           <a href="tel:+380441111111" class="tel">+38 044 111 11 11</a>
-          <button type="button" class="button primary">Online-booking</button>
+          <button type="button" class="button primary" data-modal-open>
+            Online-booking
+          </button>
         </div>
       </div>
     </header>
@@ -109,7 +111,7 @@
       </section>
 
       <!---------- best barbershop ---------->
-      <section class="section about">
+      <section class="section about" id="about">
         <div class="about-container container">
           <ul class="about-list list">
             <li class="about-item">
@@ -152,7 +154,7 @@
       </section>
 
       <!---------- services and prices ----------->
-      <section class="section servis">
+      <section class="section servis" id="servises">
         <div class="container">
           <p class="upertitle phrases-opaciti">
             Spend your time with the best masters
@@ -241,7 +243,7 @@
       </section>
 
       <!-- team -->
-      <section class="section team">
+      <section class="section team" id="barbers">
         <div class="container">
           <p class="upertitle">For true enjoyers of the atmosphere</p>
           <h2 class="section-title team-title">Our barbers</h2>
@@ -482,7 +484,7 @@
       </section>
 
       <!-- online booking and contacts-->
-      <div class="container-group">
+      <div class="container-group" id="contacts">
         <div class="container contacts-container">
           <section class="booking section">
             <h2 class="section-title booking-title">Online-booking</h2>
@@ -545,6 +547,18 @@
       </ul>
     </footer>
 
+    <!-- modal -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-button" data-modal-close>
+          <svg class="modal-svg" width="20" height="20">
+            <use href="./images/icons.svg#icon-modal-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <script src="./js/header-scroll.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

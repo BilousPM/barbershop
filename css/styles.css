@@ -12,8 +12,14 @@
   --btn-radius: 25px;
   --heder-idx: 10;
   --modal-idx: 100;
-  --transition-interactiv-btn: background-color 250ms linear;
-  --transition-interactiv-link: color 250ms linear;
+  --transition-interactive-elements: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* BASE STYLES */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -44,7 +50,7 @@ p {
   text-decoration: none;
   color: inherit;
 
-  transition: var(--transition-interactiv-link);
+  transition: color var(--transition-interactive-elements);
 
   /* transition-property: color;
   transition-duration: 250ms;
@@ -106,7 +112,7 @@ img {
   padding: 11px 19px;
   cursor: pointer;
 
-  transition: var(--transition-interactiv-btn);
+  transition: background-color var(--transition-interactive-elements);
 
   /* transition-property: background-color;
   transition-duration: 250ms;
@@ -165,9 +171,6 @@ img {
   background-color: var(--primary-text-color);
 }
 
-/* .upertitle::before {
-  margin-right: 20px;
-} */
 /*---------- heder ----------*/
 .header {
   position: fixed;
@@ -175,10 +178,16 @@ img {
   left: 0;
   width: 100%;
   z-index: var(--heder-idx);
+  transition: background-color var(--transition-slow);
 }
 
 .header.no-transparency {
-  background-color: rgba(112, 114, 118, 0.7);
+  background-image: linear-gradient(
+    to bottom,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
+  /* background-color: rgba(112, 114, 118, 0.7); */
   backdrop-filter: blur(3px);
 }
 
@@ -189,7 +198,7 @@ img {
 
 .logo {
   margin-right: 131px;
-  animation: scalelogo 3000ms linear infinite;
+  animation: scaleLogo 3000ms linear infinite;
   /* animation-name: scalelogo;
   animation-duration: 3000ms;
   animation-timing-function: linear;
@@ -227,6 +236,7 @@ img {
 }
 
 .header .link {
+  position: relative;
   color: var(--white-text-color);
   font-size: 12px;
   font-weight: 600;
@@ -239,6 +249,27 @@ img {
   color: var(--accent-color);
 }
 
+.header .link::after {
+  content: "";
+  width: 97%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: var(--accent-color);
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.2);
+  opacity: 0;
+
+  transition: transform 250ms, opasity 250ms;
+}
+
+.header .link:hover::after {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
+
 .tel {
   padding: 49px 0;
   color: var(--white-text-color);
@@ -248,11 +279,7 @@ img {
   letter-spacing: 1.2px;
   text-transform: uppercase;
 
-  transition: var(--transition-interactiv-link);
-
-  /* transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: linear; */
+  transition: color var(--transition-interactive-elements);
 }
 
 .tel:hover,
@@ -260,9 +287,9 @@ img {
   color: var(--accent-color);
 }
 
-/* ============================= 
+/* ================ 
 hero
-================================*/
+===================*/
 .hero-container {
   display: flex;
 }
@@ -399,9 +426,6 @@ hero
 }
 
 /* ---------- best barbershop ---------*/
-/* .about {
-  background-color: var(--primari-background-color);
-} */
 .about-container {
   display: flex;
 }
@@ -580,11 +604,6 @@ hero
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-
-  /* animation-name: rotate;
-  animation-duration: 3000ms;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite; */
 }
 
 .preferense-description {
@@ -810,8 +829,60 @@ hero
   margin-right: auto;
 }
 
+/* modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--modal-idx);
+
+  background-image: linear-gradient(
+    to bottom,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
+  /* background-color: rgba(112, 114, 118, 0.7); */
+  backdrop-filter: blur(3px);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  min-height: 600px;
+  background-color: floralwhite;
+  transform: translate(-50%, -50%);
+}
+
+.modal-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal-svg {
+  fill: #555555;
+}
+
 /* animation */
-@keyframes scalelogo {
+@keyframes scaleLogo {
   0% {
     transform: scale(1);
   }
