@@ -53,7 +53,7 @@
     <!---------------- heder ---------------->
     <header class="header" data-header>
       <div class="container">
-        <a href="#header" class="logo">
+        <a href="index.html" class="logo">
           <svg class="logo-svg" width="69" height="55">
             <use href="./images/icons.svg#icon-logo"></use>
           </svg>
@@ -78,7 +78,7 @@
     <!--------------- MAIN ------------------>
 
     <main>
-      <!-------------- hero --------------->
+      <!-------------- Hero --------------->
       <section class="hero">
         <div class="hero-container container">
           <div class="hero-left-side">
@@ -133,7 +133,7 @@
         </div>
       </section>
 
-      <!---------- best barbershop ---------->
+      <!---------- Best barbershop (About) ---------->
       <section class="section about" id="about">
         <div class="about-container container">
           <ul class="about-list list">
@@ -514,7 +514,7 @@
           <section class="booking section">
             <h2 class="section-title booking-title">Online-booking</h2>
             <form action="" class="booking-form" name="booking-form">
-              <div class="booking-groop">
+              <div class="booking-group">
                 <label class="booking-groop-fild">
                   <input
                     type="text"
@@ -527,13 +527,21 @@
                   <input
                     type="tel"
                     class="booking-fild"
-                    placeholder="+400 444 44 44"
+                    placeholder="+4(00) 444 44 44"
                   />
                   <span class="booking-label">phone</span>
                 </label>
               </div>
-              <label class="booking-label">Enter your message ...</label>
-              <textarea name="booking-message" rows="5"></textarea>
+              <label class="booking-group">
+                <textarea
+                  class="booking-message"
+                  name="booking-message"
+                  rows="5"
+                  placeholder="Enter your message..."
+                ></textarea>
+                <span class="booking-label">message</span></label
+              >
+
               <button type="submit" class="button primary">send</button>
             </form>
           </section>
@@ -592,10 +600,11 @@
     </footer>
 
     <!--------------- modal -------------->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal> -->
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
-          <svg class="modal-svg" width="18" height="18">
+          <svg class="modal-btn-icon" width="18" height="18">
             <use href="./images/icons.svg#icon-modal-btn"></use>
           </svg>
         </button>
@@ -604,44 +613,52 @@
         >
         <form class="booking-modal-form" name="modal-form">
           <div class="modal-form-group" role="group">
-            <label for="name">name</label>
+            <label for="name" class="modal-input-label">Name:</label>
             <div class="input-wrapper">
               <input
                 class="modal-imput-fild"
                 type=""
                 name="modal-name"
                 id="name"
+                placeholder="First name Last name"
               />
-              <svg class="input-icon" width="18" height="18">
+              <svg class="modal-input-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </div>
-            <label for="phone">phone</label>
+
+            <label for="phone" class="modal-input-label">Phone:</label>
             <div class="input-wrapper">
               <input
                 class="modal-imput-fild"
                 type="tel"
                 name="name"
                 id="phone"
+                placeholder="+4(44)444 44 44"
               />
-              <svg class="input-icon" width="18" height="18">
+
+              <svg class="modal-input-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
-            <label for="mail">mail</label>
+
+            <label for="mail" class="modal-input-label">Mail:</label>
             <div class="input-wrapper">
               <input
                 class="modal-imput-fild"
                 type="email"
                 name="mail"
                 id="mail"
+                placeholder="own@mail.com"
               />
-              <svg class="input-icon" width="20" height="20">
+
+              <svg class="modal-input-icon" width="20" height="20">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </div>
-            <label class="" for="user-message">your message</label>
+            <label class="modal-input-label" for="user-message"> Comment</label>
             <textarea
+              class="modal-input-message"
               name=""
               id="user-message"
               rows="10"

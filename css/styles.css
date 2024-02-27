@@ -716,43 +716,7 @@ hero
   margin-bottom: 44px;
 }
 
-/*=== online booking and contacts ===*/
-
-.booking-group {
-  display: flex;
-  gap: 30px;
-}
-
-/* .input-wraper {
-  position: relative;
-} */
-
-/* .label {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  font-family: Open Sans;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 15px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-} */
-.container-group {
-  margin: 0 auto;
-  max-width: 1600px;
-  background-color: #191c26;
-  background-image: url(../images/contact-bg-img/Contact-bg-img.png);
-  background-repeat: no-repeat;
-  background-position: left calc(50% + 408px) top 50%;
-}
-
-.contacts-container {
-  display: flex;
-  justify-content: space-between;
-}
-
+/*=== online booking ===*/
 .booking {
   width: 570px;
 }
@@ -767,29 +731,105 @@ hero
   margin-bottom: 44px;
 }
 
-.booking-form {
+.booking-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 44px;
+}
+
+.booking-groop-fild {
+  position: relative;
+  flex-basis: 270px;
+}
+.booking-groop-fild:not(:last-child) {
+  margin-right: 30px;
+}
+
+.booking-fild,
+.booking-message {
+  width: 100%;
+  height: 24px;
+
+  outline: unset;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  transition: border-color var(--transition-interactive-elements);
+}
+
+.booking-fild:focus,
+.booking-fild:not(:placeholder-shown),
+.booking-message:focus,
+.booking-message:not(:placeholder-shown) {
+  border-color: #ffffff;
+}
+
+.booking-fild::placeholder,
+.booking-message::placeholder {
+  font-size: 14px;
   color: rgba(157, 164, 189, 0.4);
+  opacity: 0;
 }
 
-.form-input {
-  display: inline-flex;
-  min-height: 24px;
-  width: 270px;
-  background-color: transparent;
-  margin-bottom: 44px;
-  border: none;
-  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+.booking-fild:focus::placeholder,
+.booking-message:focus::placeholder {
+  opacity: 1;
+  transition-delay: 250ms;
 }
 
-.input-message {
-  width: 570px;
-  min-height: 86px;
-  background-color: transparent;
-  margin-bottom: 44px;
-  border: none;
-  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+.booking-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);
+
+  transform-origin: left;
+  transition: transform var(--transition-interactive-elements),
+    color var(--transition-interactive-elements);
+}
+
+.booking-fild:focus + .booking-label,
+.booking-fild:not(:placeholder-shown) + .booking-label,
+.booking-message:focus + .booking-label,
+.booking-message:not(:placeholder-shown) + .booking-label {
+  transform: translateY(-100%) scale(0.8);
+  color: #ffffff;
+}
+
+.booking-groop-fild .booking-label::after {
+  content: "*";
+  color: #ff6c00;
+}
+
+.booking-message {
+  height: 76px;
 
   resize: none;
+}
+
+/* ===== Contacts =====*/
+.container-group {
+  margin: 0 auto;
+  max-width: 1600px;
+  background-color: #191c26;
+  background-image: url(../images/contact-bg-img/Contact-bg-img.png);
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 408px) top 50%;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .contacts {
@@ -865,7 +905,7 @@ hero
   letter-spacing: 0.36px;
 }
 
-/*=== footer === */
+/*===== Footer ===== */
 .footer {
   display: flex;
   align-items: baseline;
@@ -880,7 +920,7 @@ hero
   margin-right: auto;
 }
 
-/* modal */
+/*===== Modal =====*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -917,6 +957,8 @@ hero
   min-height: 600px;
   padding: 40px;
 
+  align-items: center;
+
   background-color: floralwhite;
   border-radius: 5px;
   box-shadow: 11px 12px 13px -2px rgba(245, 140, 3, 0.47);
@@ -943,8 +985,12 @@ hero
   cursor: pointer;
 }
 
-.modal-svg {
+.modal-btn-icon {
   fill: #757373;
+}
+
+.modal-form-group {
+  margin-bottom: 40px;
 }
 
 .modal-title {
@@ -956,16 +1002,76 @@ hero
 }
 
 .input-wrapper {
+  position: relative;
   margin-bottom: 20px;
 }
 
 .modal-imput-fild {
   width: 100%;
   height: 40px;
-  padding: 5px;
+  padding: 10px 10px 10px 40px;
+
+  border-radius: 5px;
+  border: 1px solid #555555;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+
+  transition: ouline var(--transition-interactive-elements),
+    box-shadow var(--transition-interactive-elements);
 }
 
-/*=== animation ===*/
+.modal-imput-fild::placeholder,
+.modal-input-message::placeholder {
+  font-size: 14px;
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.modal-imput-fild:focus {
+  outline-color: rgba(255, 108, 0, 0.5);
+  box-shadow: 0 0 0 4px rgba(255, 108, 0, 0.25);
+}
+
+.modal-input-label {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.modal-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: fill var(--transition-interactive-elements);
+}
+
+.modal-imput-fild:focus ~ .modal-input-icon {
+  fill: #ff6c00;
+}
+
+.modal-input-message {
+  display: block;
+  width: 100%;
+  height: 100px;
+
+  resize: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #555555;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+
+  font-size: 14px;
+
+  transition: ouline var(--transition-interactive-elements),
+    box-shadow var(--transition-interactive-elements);
+}
+
+.modal-input-message:focus {
+  outline-color: rgba(255, 108, 0, 0.5);
+  box-shadow: 0 0 0 4px rgba(255, 108, 0, 0.25);
+}
+
+/*===== Animation =====*/
 @keyframes scaleLogo {
   0% {
     transform: scale(1);
