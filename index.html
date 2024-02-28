@@ -600,8 +600,7 @@
     </footer>
 
     <!--------------- modal -------------->
-    <!-- <div class="backdrop is-hidden" data-modal> -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-btn-icon" width="18" height="18">
@@ -665,11 +664,16 @@
               placeholder="Your coments"
             ></textarea>
           </div>
-          <div role="group">
-            <input type="checkbox" name="" id="user-agrement" />
-            <label for="user-agrement"
+          <div class="modal-form-ageement" role="group">
+            <input
+              class="modal-agreement__checkbox"
+              type="checkbox"
+              name="checkbox"
+              id="user-agreement"
+            />
+            <label for="user-agreement" class="modal-agreement__description"
               >I agree with the mailing and accept the terms of the
-              <a href="">contract</a>
+              <a class="modal-form-agreement__link" href="">Contract</a>
             </label>
           </div>
           <button type="submit" class="button secondary">send</button>
